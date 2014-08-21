@@ -1,0 +1,49 @@
+<%= form_for @administrator, url: admin_profile_path(@administrator) do |f| %>
+  <section class="wrapper-xs bg-white border-default">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <ol class="breadcrumb no-margin">
+            <li><strong>Profile</strong></li>
+          </ol>
+        </div><!-- /.col -->
+        
+        <div class="col-xs-12 col-sm-5">
+          <div class="pull-right pull-left-xs">
+            <%= submit_tag "Save", class: "btn btn-primary" %>
+          </div><!-- /.pull-right -->
+        </div><!-- /.col -->
+        
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- wrapper-xs -->
+  
+  <% if @administrator.errors.any? %>
+    <%= render partial: "admin/base/message_error", 
+          locals: { message: "Your profile cannot be updated because of these errors:", 
+          errors: @administrator.errors } %>
+  <% end %>
+  
+  <% if flash[:success] %>
+    <%= render partial: "admin/base/message_success", 
+          locals: { message: "Your profile has been updated successfully." } %>
+  <% end %>
+    
+  <section class="wrapper-sm">
+    <div class="container-fluid">
+      <%= render partial: "form", locals: { f: f } %>
+    </div><!-- container-fluid -->
+  </section><!-- wrapper-sm -->
+  
+  <section class="wrapper-xs bg-white border-default">
+    <div class="container-fluid">
+      <div class="row">        
+        <div class="col-xs-12">
+          <div class="pull-right">
+            <%= submit_tag "Save", class: "btn btn-primary" %>
+          </div><!-- /.pull-right -->
+        </div><!-- /.col -->   
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- wrapper-xs -->
+<% end %>

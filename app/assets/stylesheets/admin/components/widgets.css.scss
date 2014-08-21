@@ -1,0 +1,32 @@
+.widget {
+  margin-bottom: 20px;
+  overflow: hidden;
+  
+  color: $textColor;
+  background: $bodyBg;
+  border: 1px solid $borderColor;
+  
+  @include border-radius($borderRadiusBase);
+}
+
+.widget-header {
+  width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+  color: white;
+}
+
+.widget-body {
+  width: 100%;
+  text-align: center;
+  color: $textColor;
+  padding: 2px 5px;
+  font-size: 13px;
+}
+
+.meta-wrapper {
+  display: table;
+  width: 100%;
+  padding: 1em;
+  vertical-align: middle;
+}

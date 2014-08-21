@@ -1,0 +1,92 @@
+select {
+  &:focus {
+    outline: 0;
+    @include box-shadow(none);
+  }
+}
+
+.select2-container {
+  display: block;
+  font-family: $mainFontFamily;
+  font-weight: $selectFontWeight;
+  
+  .select2-choice {
+    height: $inputHeightBase;
+    border: $inputBorderWidth solid $inputBorder;
+    background-image: none;
+    line-height: 34px;
+    @include border-radius($borderRadiusBase);
+    
+    &:focus, &:hover {
+      outline: none;
+    }// &:focus, &:hover
+    
+    .select2-arrow {
+      border-left: $inputBorderWidth solid $inputBorder;
+      background: $inputBgDisabled;
+      @include border-radius(0);
+    }// .select2-arrow
+    
+    .select2-arrow b {
+      background: url(image-path('vendor/select2/select2.png')) no-repeat 0 3px;
+    }// .select2-arrow b
+    
+    &:focus {
+      outline: 0;
+      @include box-shadow(none);
+    }
+  }// .select2-choice
+  
+  &:focus {
+    outline: 0;
+    @include box-shadow(none);
+  }
+}// .select2-container
+
+.select2-drop {
+  @include box-shadow(none);
+}
+
+.select2-drop-active {
+  border: $inputBorderWidth solid $inputBorder;
+  padding-top: 5px;
+ // top: 271px !important;
+}
+
+.select2-search input {
+  padding: 3px 12px;
+  font-family: $mainFontFamily;
+  font-size: $inputFontSize;
+  border: $inputBorderWidth solid $inputBorder;
+  background-color: $inputBg;
+  background: $inputBg url("/assets/vendor/select2/select2.png") no-repeat 100% -22px !important;
+}
+
+.select2-dropdown-open .select2-choice {
+  @include box-shadow(none);
+}
+
+.select2-results .select2-no-results, .select2-results .select2-searching, .select2-results .select2-selection-limit {
+  background: $inputBg;
+}
+
+.select2-results .select2-highlighted {
+  background: $brandPrimary;
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice, .select2-dropdown-open.select2-drop-above .select2-choices {
+  border: $inputBorderWidth solid $inputBorder;
+  border-top-color: transparent;
+  background: $inputBg;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+  border-top: $inputBorderWidth solid $inputBorder;
+  border-bottom: $inputBorderWidth solid $inputBorder;
+ // top: 74px !important;
+}
+
+.select2-drop.select2-drop-above {
+  @include border-radius($borderRadiusBase $borderRadiusBase 0 0);
+  @include box-shadow(none);
+}

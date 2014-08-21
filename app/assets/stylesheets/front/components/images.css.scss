@@ -1,0 +1,41 @@
+.full-image {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  @include background-size-cover;
+  
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
+}
+
+.full-image-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  
+  h1 {
+    
+  }
+  
+  h2 {
+    
+  }
+}
+
+.full-image-overlay {
+  &:after {
+    background-color: black;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+  }
+}

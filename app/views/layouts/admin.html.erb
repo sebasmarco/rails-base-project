@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->  
+    <title><%= content_for?(:title) ? yield(:title) : "Administración" %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+          
+    <!-- CSS -->
+    <%= stylesheet_link_tag    "admin/application", media: "all", "data-turbolinks-track" => true %>
+    <%= yield(:css) %>
+    
+    <meta name="robots" content="nofollow" />
+    <meta name="googlebot" content="nofollow" /> 
+        
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    
+    <!-- Javascript -->
+    <%= javascript_include_tag "admin/application", "data-turbolinks-track" => true %>
+    <%= javascript_tag do %>      
+      NProgressSetup.init()
+    <% end %>
+  </head>
+  <body> 
+    <div class="wrapper">
+      <div class="side-wrapper">
+        <%= render partial: "admin/base/sidebar" %>
+      </div>
+      
+      <div class="content-wrapper">
+        <%= render partial: "admin/base/navigation" %>
+      
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
+    
+    </div>
+    
+    <%= yield(:modals) %>
+    <%= javascript_tag do %>
+      BootstrapSetup.init();
+      DatePickerSetup.init();
+      NumericSetup.init();
+      Select2Setup.init();
+      SummernoteSetup.init();
+      UnveilSetup.init();
+      
+      MenuApp.init();
+    <% end %>
+    <%= yield(:javascript) %>    
+  </body>
+</html>

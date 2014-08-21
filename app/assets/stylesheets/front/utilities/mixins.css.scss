@@ -1,0 +1,44 @@
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin fix-opacity-hover {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin background-size-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	 
+}
+
+@mixin placeholder-color($color) {
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $color;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    $color;
+      opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    $color;
+      opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color:    $color;
+  }
+}
+
+@mixin linear-gradient-vertical($startColor, $endColor) {
+  background-color: $startColor;
+  background-image:-webkit-linear-gradient(top, $startColor, $endColor);
+  background-image:-moz-linear-gradient(top, $startColor, $endColor);
+  background-image:linear-gradient(top, $startColor, $endColor);
+}

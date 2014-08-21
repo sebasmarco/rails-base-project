@@ -1,0 +1,138 @@
+.dropdown-menu {
+  background: $dropdownBg;
+  margin: 2px 0 0;
+  border-radius: 0;
+  
+  .no-btn {
+    border: none;
+    background: white;
+    padding: 0 10px;
+    width: 100%;
+    
+    &:hover {
+      color: white;
+      background: $brandPrimary;
+    }
+  }
+}
+
+.dropdown-menu-right {
+  left: inherit;
+  right: 0;
+}
+
+.dropdown-menu-sm {
+  min-width: 164px;
+}
+
+.dropdown-menu-md {
+  min-width: 200px;
+}
+
+.btn-group {
+  .dropdown-menu {
+    border: none;
+    width: 100%;
+  }
+}
+
+.dropdown-menu > li > a {
+  color: $dropdownColor;
+  
+  &:hover {
+    color: $dropdownColor;
+    background: $dropdownBgHover;
+  }
+}
+
+.icon-arrow-left, .icon-arrow-right {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    content: "\f060";
+  }
+}
+
+.icon-arrow-right {
+  &:before {
+    content: "\f061";
+  }
+}
+
+.btn-default.dropdown-toggle {
+  background: darken($btnDefaultBg, 10%);
+  @include box-shadow($btnDefaultBoxShadow);
+}
+
+.btn-primary.dropdown-toggle {
+  border-left: 1px solid darken($btnPrimaryBg, 10%);
+}
+
+.btn-secondary.dropdown-toggle {
+  border-left: 1px solid darken($btnSecondaryBg, 10%);
+}
+
+.btn-inverse.dropdown-toggle {
+  border-left: 1px solid darken($btnInverseBg, 10%);
+}
+
+.btn-success.dropdown-toggle {
+  border-left: 1px solid darken($btnSuccessBg, 10%);
+}
+
+.btn-info.dropdown-toggle {
+  border-left: 1px solid darken($btnInfoBg, 10%);
+}
+
+.btn-warning.dropdown-toggle {
+  border-left: 1px solid darken($btnWarningBg, 10%);
+}
+
+.btn-danger.dropdown-toggle {
+  border-left: 1px solid darken($btnDangerBg, 10%);
+}
+
+.btn-group.open .btn-default.dropdown-toggle {
+  background: darken($btnDefaultBg, 10%);
+  @include box-shadow($btnDefaultBoxShadow);
+}
+
+.btn-group.open .btn-primary.dropdown-toggle {
+  background: darken($btnPrimaryBg, 10%);
+  @include box-shadow($btnPrimaryBoxShadow);
+}
+
+.btn-group.open .btn-secondary.dropdown-toggle {
+  background: darken($btnSecondaryBg, 10%);
+  @include box-shadow($btnSecondaryBoxShadow);
+}
+
+.btn-group.open .btn-inverse.dropdown-toggle {
+  background: darken($btnInverseBg, 10%);
+  @include box-shadow($btnInverseBoxShadow);
+}
+
+.btn-group.open .btn-success.dropdown-toggle {
+  background: darken($btnSuccessBg, 10%);
+  @include box-shadow($btnSuccessBoxShadow);
+}
+
+.btn-group.open .btn-info.dropdown-toggle {
+  background: darken($btnInfoBg, 10%);
+  @include box-shadow($btnInfoBoxShadow);
+}
+
+.btn-group.open .btn-warning.dropdown-toggle {
+  background: darken($btnWarningBg, 10%);
+  @include box-shadow($btnWarningBoxShadow);
+}
+
+.btn-group.open .btn-danger.dropdown-toggle {
+  background: darken($btnDangerBg, 10%);
+  @include box-shadow($btnDangerBoxShadow);
+}

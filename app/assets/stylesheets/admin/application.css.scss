@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require vendor/bootstrap.datepicker
+ *= require vendor/morris
+ *= require vendor/nprogress
+ *= require vendor/select2
+ *= require vendor/spinner
+ *= require vendor/summernote
+ */
+
+@import "bootstrap";
+
+/* Utilidades */
+@import "font-awesome";
+@import "utilities/fonts";
+@import "utilities/variables";
+@import "utilities/mixins";
+@import "utilities/helpers";
+
+/* Componentes */
+@import "components/alerts";
+@import "components/base";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/circles";
+@import "components/dropdown";
+@import "components/editor";
+@import "components/form";
+@import "components/gallery";
+@import "components/graphs";
+@import "components/images";
+@import "components/lists";
+@import "components/map";
+@import "components/modal";
+@import "components/pagination";
+@import "components/panels";
+@import "components/segmented";
+@import "components/select";
+@import "components/sidebar";
+@import "components/spinner";
+@import "components/tables";
+@import "components/tags";
+@import "components/timeline";
+@import "components/tooltip";
+@import "components/topbar";
+@import "components/upload";
+@import "components/widgets";
+
+/* Aplicaciones */
+@import "apps/nprogress";

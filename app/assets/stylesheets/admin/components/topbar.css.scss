@@ -1,0 +1,54 @@
+.top-nav {
+  background-color: $topbarBg;
+  border:           $topbarBorder;
+  margin-bottom:    0;
+  padding-top:      6px;
+  
+  @include border-radius($topbarBorderRadius);
+  
+  .navbar-nav > li > a {
+    color: $topbarLinkColor;
+  }// .navbar-nav > li > a
+  
+  .navbar-nav > li > a:hover {
+    color: $topbarLinkHoverColor;
+  }// .navbar-nav > li > a
+  
+  .navbar-nav > .active > a, 
+  .navbar-nav > .active > a:hover {
+    color: $topbarLinkActiveColor;
+    background-color: $topbarLinkActiveBg;
+  }// .navbar-nav > .active > a, .navbar-nav > .active > a:hover
+  
+  .navbar-nav > .open > a, 
+  .navbar-nav > .open > a:hover, 
+  .navbar-nav > .open > a:focus {
+    background-color: $topbarLinkActiveBg;
+  }// .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus
+  
+  .navbar-toggle {
+    border-color: $topbarToggleBorder;
+    
+    &:hover {
+      background-color: $topbarToggleBg;
+      border-color: $topbarToggleBorder;
+    }// &:hover
+  }// .navbar-toggle
+}// .admin-nav
+
+.nav-tabs {
+  margin-bottom: 20px;
+  margin-top: -10px;
+}// .nav-tabs
+
+.navbar-header {
+  width: 100%;
+  
+  .btn:hover {
+    text-decoration: none;
+    
+    span {
+      color: #e8e8e8 !important;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="alert alert-danger alert-dismissable no-margin no-radius">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+    <i class="fa fa-fw fa-times-circle"></i>
+  </button>
+  
+  <strong>
+    <i class="fa fa-fw fa-exclamation-triangle"></i> ¡Hubo un problema!
+  </strong> 
+  
+  <%= message %>
+  
+  <% if errors && errors.any? %>
+    <ul>
+      <% errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

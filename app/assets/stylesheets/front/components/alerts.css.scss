@@ -1,0 +1,27 @@
+.alert {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+  
+  color: white !important;
+  
+  .close {
+    color: white;
+    text-shadow: none;
+    opacity: 1;
+    
+    @include transition(opacity 0.2s ease-in-out);
+    
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.alert-danger {
+  background-color: $brandDanger;
+}
+
+.alert-success {
+  background-color: $brandInfo;
+}

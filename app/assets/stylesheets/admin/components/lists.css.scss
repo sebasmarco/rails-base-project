@@ -1,0 +1,111 @@
+.horizontal-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }// li
+}// .horizontal-list
+
+.social-list {
+  li {
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    border-radius: 18px;
+    background: $brandPrimary;
+    margin-right: 3px;
+    cursor: pointer;
+    
+    i {
+      color: white;
+      font-size: 18px;
+      line-height: 36px;
+    }
+    
+    &.web_page {
+      background: $brandDefault;
+      
+      &:hover {
+        background: darken($brandDefault, 10%);
+      }
+    }// &.web_page
+    
+    &.facebook {
+      background: $socialFacebook;
+      
+      &:hover {
+        background: darken($socialFacebook, 10%);
+      }
+    }
+    
+    &.twitter {
+      background: $socialTwitter;
+      
+      &:hover {
+        background: darken($socialTwitter, 10%);
+      }
+    }
+    
+    &.pinterest {
+      background: $socialPinterest;
+      
+      &:hover {
+        background: darken($socialPinterest, 10%);
+      }
+    }
+    
+    &.instagram {
+      background: $socialInstagram;
+      
+      &:hover {
+        background: darken($socialInstagram, 10%);
+      }
+    }
+  }
+}
+
+.cart-list {
+  li {
+    cursor: pointer;
+    background: $brandPrimary;
+    border-bottom: 1px solid darken($brandPrimary, 5%);
+    border-top: 1px solid darken($brandPrimary, 5%);
+    color: white;
+    font-size: 12px;
+    margin-right: -4px;
+    text-align: center;
+    padding: 5px 10px;
+    width: 110px;
+    
+    .cart-number {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: white;
+    }
+    
+    .cart-total {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 3px 0;
+    }
+    
+    .cart-items {
+      color: white;
+      font-size: 12px;
+    }
+    
+    &:hover, &.active {
+      background: darken($brandPrimary, 5%);
+    }// &:hover 
+    
+    &:first-child {
+      border-left: 1px solid darken($brandPrimary, 5%);
+    }
+    
+    &:last-child {
+      border-right: 1px solid darken($brandPrimary, 5%);
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.thumbnail {
+  margin-bottom: 0;
+}
+
+.thumbnail.img-circle {
+  border-radius: 50% !important;
+}
+
+.img-thumbnail, .thumbnail {
+  border-radius: $borderRadiusBase;
+  border-color: $borderColor;
+}
+
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+  border-color: $brandPrimary;
+}
+
+
+.image-preview-container {
+  
+}
+
+.image-preview-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-right: 5px;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      .btn-remove {
+        opacity: 1;
+      }
+    }
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .btn-remove {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    opacity: 0;
+    
+    @include transition(opacity 0.2s ease-in-out);
+  }
+  
+  .widget {
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    
+    @include transition(all 0.2s ease-in);
+    
+    &:hover {
+      background: #eeeeee;
+      
+      p {
+        text-decoration: none;
+      }
+    }
+    
+    i {
+      font-size: 35px;
+      display: inline-block;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    
+    p {
+      font-size: 11px;
+    }
+  }// .add-widget
+}

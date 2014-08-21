@@ -1,0 +1,14 @@
+<li id="gallery-image-<%= @id %>">
+  <div class="gallery-image">
+    <span class='helper'></span>
+    <img src="<%= @image_small %>" />
+    
+    <span class="gallery-image-delete">
+      <a href="#" class="btn btn-xs btn-danger" data-toggle="delete-gallery-image" data-id="<%= @id %>" 
+        data-container="#gallery-image-<%= @id %>"
+        data-url="<%= @delete_url %>">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </span>
+  </div>
+</li>

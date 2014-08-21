@@ -1,0 +1,57 @@
+.alert {
+  padding:  15px;
+  color:    $alertColor;
+  @include  border-radius($alertBorderRadius);
+  
+  a {
+    color: $alertLinkColor;
+    
+    &:hover {
+      color: $alertLinkHoverColor;
+    }// &:hover
+  }// a
+}// .alert
+
+.alert-primary {
+  background-color: $brandPrimary;
+  border-color: $brandPrimary;
+}
+
+.alert-secondary {
+  background-color: $brandSecondary;
+  border-color: $brandSecondary;
+}
+
+.alert-inverse {
+  background-color: $brandInverse;
+  border-color: $brandInverse;
+}
+
+.alert-default {
+  background-color: $brandDefault;
+  border-color: $brandDefault;
+}
+
+.alert-success {
+  background-color: $brandSuccess;
+  border-color:     $brandSuccess;
+}// .alert-success
+
+.alert-danger {
+  background-color: $brandDanger;
+  border-color:     $brandDanger;
+}// .alert-danger
+
+.alert-info {
+  background-color: $brandInfo;
+  border-color:     $brandInfo;
+}// .alert-info
+
+.alert-warning {
+  background-color: $brandWarning;
+  border-color:     $brandWarning;
+}// .alert-warning
+
+.alert-dismissable {
+  padding-right: 35px;
+}// .alert-dismissable

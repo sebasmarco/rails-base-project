@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->  
+    <title><%= content_for?(:title) ? yield(:title) : "Sitio Web" %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <%= content_for?(:meta) ? yield(:meta) : render(partial: "front/base/meta") %>
+            
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+          
+    <!-- CSS -->
+    <%= stylesheet_link_tag    "front/application", media: "all", "data-turbolinks-track" => true %>
+    <%= yield(:css) %>
+        
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    
+    <!-- Javascript -->
+    <%= javascript_include_tag "front/application", "data-turbolinks-track" => true %>
+    <%= javascript_tag do %>      
+      NProgressSetup.init()
+    <% end %>
+  </head>
+  <body>    
+    <div id="content">
+      <%= yield(:alerts) %>
+      
+      <%= render partial: "front/base/header" %>
+      
+      <%= yield %>
+      
+      <%= render partial: "front/base/footer" %>
+    </div>
+    
+    <%= yield(:modals) %>
+    <%= javascript_tag do %>
+      BootstrapSetup.init();
+      RetinaSetup.init();
+      UnveilSetup.init();
+    <% end %>
+    <%= yield(:javascript) %>    
+  </body>
+</html>

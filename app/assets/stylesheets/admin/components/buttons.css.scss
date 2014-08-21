@@ -1,0 +1,322 @@
+.btn {
+  font-weight:      $btnFontWeight;
+  border-radius:    $btnBorderRadius;
+  background-clip:  padding-box;
+  border-width:     $btnBorderWidth;
+  
+  @include transition(all 0.1s ease);
+  
+  &.btn-outline {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+}// .btn
+
+.btn-primary {
+  color:            $btnPrimaryColor;
+  border-color:     $btnPrimaryBorder;
+  background-color: $btnPrimaryBg;
+  @include box-shadow($btnPrimaryBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    color:            $btnPrimaryColor;
+    background-color: darken($btnPrimaryBg, 10%);
+    border-color:     darken($btnPrimaryBorder, 10%);
+  }
+  
+  &.btn-outline {
+    font-weight:      bold;
+    color:            $btnPrimaryOutlineColor;
+        
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color:            $btnPrimaryColor;
+      border-color:     $btnPrimaryBorder;
+      background-color: $btnPrimaryBg;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnPrimaryColor;
+  }
+}// .btn-primary
+
+.btn-secondary {
+  color:              $btnSecondaryColor;
+  border-color:       $btnSecondaryBorder;
+  background-color:   $btnSecondaryBg;
+  
+  @include box-shadow($btnSecondaryBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    color:            $btnSecondaryColor; 
+    background-color: darken($btnSecondaryBg, 10%);
+    border-color:     darken($btnSecondaryBorder, 10%);
+  }
+  
+  &.btn-outline {
+    font-weight:      bold;
+    color:            $btnSecondaryOutlineColor;    
+    
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color:            $btnSecondaryColor; 
+      border-color:     $btnSecondaryBorder;
+      background-color: $btnSecondaryBg;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnSecondaryColor;
+  }
+}// .btn-secondary
+
+.btn-default {
+  color:            $btnDefaultColor;
+  border-color:     $btnDefaultBorder;
+  background-color: $btnDefaultBg;
+  @include box-shadow($btnDefaultBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    color:            $btnDefaultColor !important;
+    background-color: darken($btnDefaultBg, 10%) !important;
+    border-color:     darken($btnDefaultBorder, 10%) !important;
+    @include box-shadow($btnDefaultBoxShadow !important);
+  }
+  
+  &.btn-outline {
+    font-weight:      bold;
+    color:            $btnDefaultOutlineColor;
+        
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color:            $btnDefaultColor;
+      border-color:     $btnDefaultBorder;
+      background-color: $btnDefaultBg;
+      @include box-shadow(none !important);
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnDefaultColor;
+  }
+}// .btn-primary
+
+.btn-inverse {
+  color:              $btnInverseColor;
+  border-color:       $btnInverseBorder;
+  background-color:   $btnInverseBg;
+  
+  @include box-shadow($btnInverseBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    color: $btnInverseColor;
+    background-color: $btnInverseHoverBg;
+    border-color:     $btnInverseHoverBg;
+  }
+  
+  &.btn-outline {
+    color:            $btnInverseOutlineColor;    
+    
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color: $btnInverseColor;
+      border-color:     $btnInverseBorder;
+      background-color: $btnInverseBg;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnInverseColor;
+  }
+}// .btn-inverse
+
+.btn-success {
+  color:              $btnSuccessColor;
+  border-color:       $btnSuccessBorder;
+  background-color:   $btnSuccessBg;
+  
+  @include box-shadow($btnSuccessBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    background-color: darken($btnSuccessBg, 10%);
+    border-color:     darken($btnSuccessBorder, 10%);
+  }
+  
+  &.btn-outline {
+    color:            $btnSuccessOutlineColor;    
+    
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color: $btnSuccessColor;
+      border-color:     $btnSuccessBorder;
+      background-color: $btnSuccessBorder;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnSuccessColor;
+  }
+}// .btn-success
+
+.btn-info {
+  color:              $btnInfoColor;
+  border-color:       $btnInfoBorder;
+  background-color:   $btnInfoBg;
+  
+  @include box-shadow($btnInfoBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    background-color: darken($btnInfoBg, 10%);
+    border-color:     darken($btnInfoBorder, 10%);
+  }
+  
+  &.btn-outline {
+    color:            $btnInfoOutlineColor;    
+    
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color:            $btnInfoColor;
+      border-color:     $btnInfoBorder;
+      background-color: $btnInfoBg;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnInfoColor;
+  }
+}// .btn-info
+
+.btn-warning {
+  color:              $btnWarningColor;
+  border-color:       $btnWarningBorder;
+  background-color:   $btnWarningBg;
+  
+  @include box-shadow($btnWarningBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    background-color: darken($btnWarningBg, 10%);
+    border-color:     darken($btnWarningBorder, 10%);
+  }
+  
+  &.btn-outline {
+    color:            $btnWarningOutlineColor;    
+    
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color:            $btnWarningColor;
+      border-color:     $btnWarningBorder;
+      background-color: $btnWarningBg;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnWarningColor;
+  }
+}// .btn-warning
+
+.btn-danger {
+  color:              $btnDangerColor;
+  border-color:       $btnDangerBorder;
+  background-color:   $btnDangerBg;
+  
+  @include box-shadow($btnDangerBoxShadow);
+  
+  &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+    background-color: darken($btnDangerBg, 10%);
+    border-color:     darken($btnDangerBorder, 10%);
+  }
+  
+  &.btn-outline {
+    color:            $btnDangerOutlineColor;    
+    
+    &:hover, &:focus, &:active, &.active, &.disabled, &.disabled:hover, &.disabled:focus, &.disabled:active,
+    &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled]:active {
+      color:            $btnDangerColor;
+      border-color:     $btnDangerBorder;
+      background-color: $btnDangerBg;
+    }// &:hover, &:focus, &:active, &.active
+  }// &.btn-outline
+  
+  .caret {
+    border-top-color: $btnDangerColor;
+  }
+}// .btn-danger
+
+.active {
+  .btn-primary.btn-outline {
+    color:            $btnPrimaryColor;
+    border-color:     $btnPrimaryBorder;
+    background-color: $btnPrimaryBg;
+  }
+  
+  .btn-secondary.btn-outline {
+    color:            $btnSecondaryColor;
+    border-color:     $btnSecondaryBorder;
+    background-color: $btnSecondaryBg;
+  }
+  
+  .btn-default.btn-outline {
+    color:            $btnDefaultColor;
+    border-color:     $btnDefaultBorder;
+    background-color: $btnDefaultBg;
+  }
+  
+  .btn-inverse.btn-outline {
+    color:            $btnInverseColor;
+    border-color:     $btnInverseBorder;
+    background-color: $btnInverseBg;
+  }
+  
+  .btn-success.btn-outline {
+    color:            $btnSuccessColor;
+    border-color:     $btnSuccessBorder;
+    background-color: $btnSuccessBg;
+  }
+  
+  .btn-info.btn-outline {
+    color:            $btnInfoColor;
+    border-color:     $btnInfoBorder;
+    background-color: $btnInfoBg;
+  }
+  
+  .btn-warning.btn-outline {
+    color:            $btnWarningColor;
+    border-color:     $btnWarningBorder;
+    background-color: $btnWarningBg;
+  }
+  
+  .btn-danger.btn-outline {
+    color:            $btnDangerColor;
+    border-color:     $btnDangerBorder;
+    background-color: $btnDangerBg;
+  }
+}
+
+.btn-lg-xs {
+  padding: 5px 8px;
+  font-size: 15px;
+}
+
+.input-group-btn {
+  .btn {
+    height: 34px;
+    margin-top: -2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-lg-xs {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}// media (min-width: 768px)

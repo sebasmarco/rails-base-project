@@ -1,0 +1,18 @@
+.note-editor {
+  border: $inputBorderWidth solid $borderColor;
+  border-radius: $borderRadiusBase;
+  
+  .note-toolbar {
+    background: #f6f6f6;
+    border-bottom: $inputBorderWidth solid $borderColor;
+    padding-bottom: 7px;
+  }
+  
+  .note-statusbar {
+    background: #f6f6f6;
+    
+    .note-resizebar {
+      border-top:  $inputBorderWidth solid $borderColor;
+    }
+  }
+}

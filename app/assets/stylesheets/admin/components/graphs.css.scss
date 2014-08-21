@@ -1,0 +1,39 @@
+.main-graph-container {
+  height: 340px;
+  padding: 20px;
+  border: 1px solid $borderColor;
+}
+
+.morris-hover.morris-default-style {
+  border-radius: 2px;
+  background-clip: padding-box;
+  padding: 10px;
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  border: 0;
+  font-family: $raleway;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.morris-hover {
+  position: absolute;
+  z-index: 1000;
+}
+
+.bg-default {
+  .morris-hover.morris-default-style {
+    background: rgba(61, 61, 61, 0.8);
+  }
+}
+
+svg {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 767px) {
+  .main-graph-container {
+    padding: 5px;
+  }
+}

@@ -1,0 +1,117 @@
+<section class="wrapper-xs bg-white border-default">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-5">
+        <ol class="breadcrumb no-margin">
+          <li class="active"><strong>Dashboard</strong></li>
+        </ol>
+      </div><!-- /.col -->
+      
+      <div class="col-xs-12 col-sm-8 col-md-7">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 mb-xs-10 no-margin form-group">
+            <input type="date" id="dashboard-start-date" name="start-date" class="form-control" />
+          </div><!-- form-group -->
+          
+          <div class="col-xs-12 col-sm-6 mb-xs-10 no-margin form-group">
+            <input type="date" id="dashboard-end-date" name="end-date" class="form-control" />
+          </div><!-- form-group -->
+        </div><!-- row -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
+
+<div class="wrapper-sm">
+  <div class="container-fluid">
+    
+    <div class="row mb-10">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="panel panel-xs panel-primary no-hover">
+        <div class="panel-header panel-header-primary">
+          <h5>Stat 1</h5>
+        </div><!-- /.panel-header -->
+        
+        <div class="panel-body">
+          <h2 id="panel-1">0</h2>
+        </div>
+      </div><!-- /.panel -->
+    </div><!-- col -->
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="panel panel-xs panel-info no-hover">
+        <div class="panel-header panel-header-info">
+          <h5>Stat 2</h5>
+        </div><!-- /.panel-header -->
+        
+        <div class="panel-body">
+          <h2 id="panel-2">0</h2>
+        </div>
+      </div><!-- /.panel -->
+    </div><!-- col -->
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="panel panel-xs panel-secondary no-hover">
+        <div class="panel-header panel-header-secondary">
+          <h5>Stat 3</h5>
+        </div><!-- /.panel-header -->
+        
+        <div class="panel-body">
+          <h2 id="panel-3">0</h2>
+        </div>
+      </div><!-- /.panel -->
+    </div><!-- col -->
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="panel panel-xs panel-success no-hover">
+        <div class="panel-header panel-header-success">
+          <h5>Stat 4</h5>
+        </div><!-- /.panel-header -->
+        
+        <div class="panel-body">
+          <h2 id="panel-4">0</h2>
+        </div>
+      </div><!-- /.panel -->
+    </div><!-- col -->
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="dashboard-chart" class="main-graph-container"></div>
+    </div>
+  </div><!-- row -->
+  
+  <div class="row mt-20">
+    <div class="col-xs-12">
+      <h4><b>Últimos ...</b></h4>
+    </div><!-- col -->
+  </div><!-- row -->
+  
+  <div class="row mt-20">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+              
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div><!-- table-responsive -->
+    </div><!-- col -->
+  </div><!-- row -->
+    
+  </div><!-- container-fluid -->
+</div><!-- wrapper-sm -->
+
+<%= content_for(:javascript) do %>
+  <%= javascript_tag do %>
+    DashboardChartApp.init();
+/*    DashboardChartDataApp.init({
+      url: ""
+    });*/
+  <% end %>
+<% end %>

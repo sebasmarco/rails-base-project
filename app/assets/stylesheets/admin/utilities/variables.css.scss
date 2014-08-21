@@ -1,0 +1,246 @@
+// Colores Base
+$textColor:             #231f20;
+$linkColor:             #009eb1;
+$linkHoverColor:        darken($linkColor, 15%);
+
+$whiteSnow:             #f7f5fa;
+$greyDarker:            lighten(#000, 13.5%); // #222
+$greyDark:              lighten(#000, 20%);   // #333
+$grey:                  lighten(#000, 33.5%); // #555
+$greyLight:             lighten(#000, 60%);   // #999
+$greyLighter:           lighten(#000, 93.5%); // #eee
+
+$brandPrimary:          #EFC25A;
+$brandSecondary:        #202B30;
+$brandDefault:          #E8E8E8;
+$brandSuccess:          #27ae60;
+$brandInfo:             #009FAF;
+$brandWarning:          #f39c12;
+$brandDanger:           #FC6347;
+$brandInverse:          #333333;
+$brandInverseLighter:   #0f1114;
+
+$socialFacebook:        #3B5998;
+$socialFlickr:          #ff0084;
+$socialFoursquare:      #0072b1;
+$socialGooglePlus:      #dd4b39;
+$socialInstagram:       #517fa4;
+$socialLinkedin:        #007bb6;
+$socialPinterest:       #cb2027;
+$socialQuora:           #a82400;
+$socialTumblr:          #32506d;
+$socialTwitter:         #4099FF;
+$socialVimeo:           #aad450;
+$socialYoutube:         #bb0000;
+
+// Fuentes & Cabeceras
+$mainFontFamily:    $raleway;
+$headerFontFamily:  inherit;
+$headerFontWeight:  500;
+$headerLineHeight:  1.1;
+$headerColor:       inherit;
+$fontSizeBase:      13px;
+$fontWeightBase:    500;
+$fontSizeH1:        floor(($fontSizeBase * 2.6));
+$fontSizeH2:        floor(($fontSizeBase * 2.15));
+$fontSizeH3:        ceil(($fontSizeBase * 1.7));
+$fontSizeH4:        ceil(($fontSizeBase * 1.25));
+$fontSizeH5:        $fontSizeBase;
+$fontSizeH6:        ceil(($fontSizeBase * 0.85));
+$headerMargin:      0;
+
+// Bordes
+$borderRadiusBase:  2px;
+$borderRadiusSmall: 1px;
+$borderRadiusLarge: 3px;
+
+$borderColor: $brandDefault;
+$borderWidth: 2px;
+
+// Dropdown
+$dropdownBg:      white;
+$dropdownBgHover: #f7f5fa;
+$dropdownColor:   #231f20;
+
+// Tablas
+$tableCellPadding:          8px;
+$tableCondensedCellPadding: 5px;
+$tableBg:                   transparent;
+$tableBgAccent:             #f9f9f9;
+$tableBgHover:              #f5f5f5;
+$tableBgActive:             $tableBgHover;
+$tableBorder:               $borderColor;
+$tableBorderWidth:          1px;
+
+$tableHeaderFontWeight:     600;
+$tableHeaderFontSize:       11px;
+
+$tableColor:                $textColor;
+$tableFontSize:             13px;
+
+// Fondos
+$bodyBg:      #fff;
+
+// Botones
+$btnFontWeight:                 bold;
+$btnBorderRadius:               $borderRadiusBase;
+$btnBorderWidth:                2px;
+
+$btnDefaultColor:               $brandInverse;
+$btnDefaultOutlineColor:        $brandDefault;
+$btnDefaultBg:                  $brandDefault;
+$btnDefaultBorder:              $brandDefault;
+$btnDefaultBoxShadow:           0 2px 0 0 darken($brandDefault, 10%);
+$btnDefaultBoxShadowDisabled:   0 2px 0 0 lighten($brandDefault, 10%);
+
+$btnInverseColor:               white;
+$btnInverseOutlineColor:        $brandInverse;
+$btnInverseBg:                  $brandInverse;
+$btnInverseBorder:              $brandInverse;
+$btnInverseBoxShadow:           0 2px 0 0 $brandInverseLighter;
+$btnInverseHoverBg:             lighten($brandInverse, 10%);
+
+$btnPrimaryColor:               #fff;
+$btnPrimaryOutlineColor:        $brandPrimary;
+$btnPrimaryBg:                  $brandPrimary;
+$btnPrimaryBorder:              $brandPrimary;
+$btnPrimaryBoxShadow:           0 2px 0 0 darken($brandPrimary, 10%);
+
+$btnSecondaryColor:             white;
+$btnSecondaryOutlineColor:      $brandSecondary;
+$btnSecondaryBg:                $brandSecondary;
+$btnSecondaryBorder:            $brandSecondary;
+$btnSecondaryBoxShadow:         0 2px 0 0 darken($brandSecondary, 10%);
+
+$btnSuccessColor:               #fff;
+$btnSuccessOutlineColor:        $brandSuccess;
+$btnSuccessBg:                  $brandSuccess;
+$btnSuccessBorder:              $brandSuccess;
+$btnSuccessBoxShadow:           0 2px 0 0 darken($brandSuccess, 10%);
+
+$btnInfoColor:                  #fff;
+$btnInfoOutlineColor:           $brandInfo;
+$btnInfoBg:                     $brandInfo;
+$btnInfoBorder:                 $brandInfo;
+$btnInfoBoxShadow:              0 2px 0 0 darken($brandInfo, 10%);
+
+$btnWarningColor:               #fff;
+$btnWarningOutlineColor:        $brandWarning;
+$btnWarningBg:                  $brandWarning;
+$btnWarningBorder:              $brandWarning;
+$btnWarningBoxShadow:           0 2px 0 0 darken($brandWarning, 10%);
+
+$btnDangerColor:                #fff;
+$btnDangerOutlineColor:         $brandDanger;
+$btnDangerBg:                   $brandDanger;
+$btnDangerBorder:               $brandDanger;
+$btnDangerBoxShadow:            0 2px 0 0 darken($brandDanger, 10%);
+
+$btnLinkDisabledColor:          $greyLight;
+
+// Forms
+$inputBg:                     #fff;
+$inputBgDisabled:             $greyLighter;
+
+$inputColor:                  $greyDarker;
+$inputBorder:                 $borderColor;
+$inputBorderRadius:           $borderRadiusBase;
+$inputBorderFocus:            $brandPrimary;
+$inputBorderWidth:            1px;
+$inputPlaceholderColor:       $greyLight;
+
+$inputFontSize:               12px;
+$inputFontSizeMobile:         16px;
+$inputHeightBase:             32px;
+$inputHeightLarge:            42px;
+$inputHeightSmall:            30px;
+
+$legendColor:                 $greyDark;
+$legendBorderColor:           #e5e5e5;
+
+$inputGroupAddonBg:           $greyLighter;
+$inputGroupAddonBorderColor:  $inputBorder;
+
+$textAreaHeight:              210px;
+
+$radioFontSize:               12px;
+$radioFontWeight:             bold;
+
+$formHintColor:               $greyDark;
+$formHintFontSize:            12px;
+$formHintLineHeight:          15px;
+$formHintFontWeight:          600;
+
+$summaryFontSizeH1:           14px;
+$summaryFontSizeP:            12px;
+$summaryLineHeightH1:         18px;
+$summaryLineHeightP:          15px;
+$summaryFontWeightH1:         600;
+$summaryFontWeightP:          400;
+
+$subcontainerFontSizeH2:      13px;
+$subcontainerFontSizeP:       12px;
+$subcontainerFontSizeB:       13px;
+$subcontainerLineHeightH2:    13px;
+$subcontainerLineHeightP:     15px;
+$subcontainerLineHeightB:     15px;
+
+
+// Z-Index
+
+// Sidebar
+$sidebarBg:                 $brandSecondary;
+$sidebarLinkColor:          #fff;
+$sidebarLinkHoverColor:     $sidebarLinkColor;
+$sidebarLinkHeaderColor:    rgba(255, 255, 255, 0.6);
+$sidebarLinkHeaderFontSize: 85%;
+$sidebarLinkActiveBg:       darken($brandSecondary, 5%);
+$sidebarLinkFontWeight:     600;
+
+$sidebarHeaderBg:           $brandPrimary;
+$sidebarHeaderHoverBg:      darken($brandPrimary, 10%);
+$sidebarHeaderHeight:       50px;
+$sidebarHeaderFontSize:     18px;
+$sidebarHeaderLineHeight:   18px;
+$sidebarHeaderFontWeight:   600;
+
+$sidebarSubheaderColor:     #fff;
+
+// Topbar
+$topbarBg:                $brandSecondary;
+$topbarBorderRadius:      0px;
+$topbarBorder:            none !important;
+
+$topbarLinkColor:         #fff;
+$topbarLinkHoverColor:    $topbarLinkColor;
+$topbarLinkActiveBg:      $topbarBg;
+$topbarLinkActiveColor:   $topbarLinkColor;
+
+$topbarToggleBg:                #000;
+$topbarToggleBorder:            #000;
+
+// Alerts
+$alertBorderRadius:             0px;
+$alertColor:                    #fff;
+$alertLinkColor:                $alertColor;
+$alertLinkHoverColor:           $alertColor;
+
+// Pagination
+$paginationBorder:              $borderColor;
+$paginationBorderWidth:         $borderWidth;
+$paginationLinkColor:           $brandDefault;
+$paginationLinkHoverBg:         $brandDefault;
+$paginationLinkHoverColor:      white;
+$paginationLinkFontSize:        14px;
+$paginationLinkFontWeight:      bold;
+
+$paginationActiveLinkBg:        $brandDefault;
+$paginationActiveLinkBorder:    $brandDefault;
+$paginationActiveLinkColor:     white;
+$paginationActiveLinkDisabled:  $brandDefault;
+
+// Select
+$selectFontWeight: bold;
+
+// Spinner
+$spinnerOverlayBg: #e8e8e8;

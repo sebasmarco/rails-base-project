@@ -1,0 +1,65 @@
+// Colores Base
+$textColor:             #231f20;
+$linkColor:             #009eb1;
+$linkHoverColor:        darken($linkColor, 15%);
+
+// Colores de la Marca
+$brandPrimary:          #EFC25A;
+$brandSecondary:        #202B30;
+
+$brandInfo:             #009FAF;
+$brandDanger:           #FC6347;
+
+$brandDefault:          #E8E8E8;
+$brandSuccess:          #27ae60;
+$brandWarning:          #f39c12;
+$brandInverse:          #333333;
+$brandInverseLighter:   #0f1114;
+
+$whiteSnow:             #f7f5fa;
+$greyDarker:            lighten(#000, 13.5%); // #222
+$greyDark:              lighten(#000, 20%);   // #333
+$grey:                  lighten(#000, 33.5%); // #555
+$greyLight:             lighten(#000, 60%);   // #999
+$greyLighter:           #EDEEEF;
+
+// Colores de Redes Sociales
+$socialFacebook:        #3B5998;
+$socialFlickr:          #ff0084;
+$socialFoursquare:      #0072b1;
+$socialGooglePlus:      #dd4b39;
+$socialInstagram:       #517fa4;
+$socialLinkedin:        #007bb6;
+$socialPinterest:       #cb2027;
+$socialQuora:           #a82400;
+$socialTumblr:          #32506d;
+$socialTwitter:         #4099FF;
+$socialVimeo:           #aad450;
+$socialYoutube:         #bb0000;
+
+// Fuentes & Cabeceras
+$mainFontFamily:    $raleway;
+$headerFontFamily:  inherit;
+$headerFontWeight:  500;
+$headerLineHeight:  1.1;
+$headerColor:       inherit;
+$fontSizeBase:      13px;
+$fontWeightBase:    normal;
+$fontSizeH1:        floor(($fontSizeBase * 2.6));
+$fontSizeH2:        floor(($fontSizeBase * 2.15));
+$fontSizeH3:        ceil(($fontSizeBase * 1.7));
+$fontSizeH4:        ceil(($fontSizeBase * 1.25));
+$fontSizeH5:        $fontSizeBase;
+$fontSizeH6:        ceil(($fontSizeBase * 0.85));
+$headerMargin:      0;
+
+// Bordes
+$borderRadiusBase:  2px;
+$borderRadiusSmall: 1px;
+$borderRadiusLarge: 3px;
+
+$borderColor: $brandDefault;
+$borderWidth: 2px;
+
+// Fondos
+$bodyBg:      #fff;

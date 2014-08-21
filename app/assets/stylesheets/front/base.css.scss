@@ -1,0 +1,34 @@
+html, body {
+  font-family:  $mainFontFamily;
+  font-size:    $fontSizeBase;
+  font-weight:  $fontWeightBase;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  font-weight: normal;
+  font-family: $mainFontFamily;
+}
+
+h1 {
+  font-size: $fontSizeH1;
+}
+
+h2 {
+  font-size: $fontSizeH2;
+}
+
+h3 {
+  font-size: $fontSizeH3;
+}
+
+h4 {
+  font-size: $fontSizeH4;
+}
+
+h5 {
+  font-size: $fontSizeH5;
+}
+
+h6 {
+  font-size: $fontSizeH6;
+}

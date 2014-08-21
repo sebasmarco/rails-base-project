@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: gitz_development
+
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: gitz_test
+
+production:
+  adapter:  postgresql
+  database: gitz_production
+  encoding: unicode
+  pool:     5
+  username: gitz

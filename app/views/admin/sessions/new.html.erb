@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row mt-80 mb-40">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 align-center">
+      <h1>Iniciar Sessión</h1>
+    </div><!-- col -->
+  </div><!-- row -->
+  
+  <% if @user_session.errors.any? %>
+    <div class="row mb-40">
+      <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+        <%= render partial: "admin/base/message_error", locals: { message: "Correo electrónico y/o contraseña mal ingresada", errors: nil } %>
+      </div>
+    </div>
+  <% end %>
+  
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+      <%= form_for @user_session, url: admin_sessions_path, html: { role: "form" } do |f| %>
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+        
+        <div class="form-group">
+          <label>Contraseña</label>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-block">Ingresar</button>
+      <% end %>
+    </div>
+  </div>
+</div><!-- container -->

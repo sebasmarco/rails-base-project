@@ -1,0 +1,231 @@
+.panel {
+  position: relative;
+  height: 250px;
+  text-align: center;
+  border: none;
+  margin-bottom: 15px;
+  
+  @include box-shadow(none);
+  @include border-radius(2px);
+  @include transition(background 0.2s ease-in-out);
+}
+
+.panel-short {
+  height: 180px;
+}
+
+.panel-xs {
+  height: 130px;
+  
+  .panel-body {
+    padding: 0;
+    margin-top: -5px;
+    
+    h2 {
+      font-size: 60px;
+    }
+  }
+}
+
+.panel-primary {
+  color: white;
+  background: $brandPrimary;
+  
+  &:hover {
+    background: darken($brandPrimary, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandPrimary !important;
+    }
+  }
+}
+
+.panel-secondary {
+  color: white;
+  background: $brandSecondary;
+  
+  &:hover {
+    background: darken($brandSecondary, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandSecondary !important;
+    }
+  }
+}
+
+.panel-success {
+  color: white;
+  background: $brandSuccess;
+  
+  &:hover {
+    background: darken($brandSuccess, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandSuccess !important;
+    }
+  }
+}
+
+.panel-info {
+  color: white;
+  background: $brandInfo;
+  
+  &:hover {
+    background: darken($brandInfo, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandInfo !important;
+    }
+  }
+}
+
+.panel-warning {
+  color: white;
+  background: $brandWarning;
+  
+  &:hover {
+    background: darken($brandWarning, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandWarning !important;
+    }
+  }
+}
+
+.panel-danger {
+  color: white;
+  background: $brandDanger;
+  
+  &:hover {
+    background: darken($brandDanger, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandDanger !important;
+    }
+  }
+}
+
+.panel-inverse {
+  color: white;
+  background: $brandInverse;
+  
+  &:hover {
+    background: lighten($brandInverse, 10%);
+  }
+  
+  &.no-hover {
+    &:hover {
+      background: $brandInverse !important;
+    }
+  }
+}
+
+.panel-default {
+  color: $brandInverse;
+  background: $brandDefault;
+  
+  &:hover {
+    background: darken($brandDefault, 10%);
+  }
+  
+  &.no-hover {
+    background: $brandDefault;
+  }
+}
+
+.panel-header {
+  padding: 3px;
+  margin-bottom: 15px;
+  @include border-radius(2px 2px 0 0);
+
+  h5 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+}
+
+.panel-header-primary {
+  color: white;
+  background: darken($brandPrimary, 10%);
+}
+
+.panel-header-secondary {
+  color: white;
+  background: darken($brandSecondary, 10%);
+}
+
+.panel-header-success {
+  color: white;
+  background: darken($brandSuccess, 10%);
+}
+
+.panel-header-info {
+  color: white;
+  background: darken($brandInfo, 10%);
+}
+
+.panel-header-warning {
+  color: white;
+  background: darken($brandWarning, 10%);
+}
+
+.panel-header-danger {
+  color: white;
+  background: darken($brandDanger, 10%);
+}
+
+.panel-header-inverse {
+  color: white;
+  background: lighten($brandInverse, 10%);
+}
+
+.panel-header-default {
+  color: $brandInverse;
+  background: darken($brandDefault, 10%);
+}
+
+.panel-body {
+  .fa {
+    font-size: 120px;
+    margin-top: 10px;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+.panel-footer {
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  
+  b {
+    display: inline-block;
+    width: 100%;
+    min-height: 15px;
+  }
+}

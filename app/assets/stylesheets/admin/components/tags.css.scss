@@ -1,0 +1,35 @@
+.tags {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 0.4em 0.4em 0;
+  }
+}
+
+.tags:before, .tags:after {
+  content: " ";
+  display: table;
+}
+
+.tag {
+  padding: 2px 4px;
+  background: $brandDefault;
+  color: white;
+  font-weight: bold;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 2px;
+  
+  @include transition(background 0.1s ease-in);
+  
+  &.active, &:hover {
+    background: $brandPrimary;
+  }
+}

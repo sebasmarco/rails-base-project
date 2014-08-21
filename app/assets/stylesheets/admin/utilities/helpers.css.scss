@@ -1,0 +1,447 @@
+/* Margenes & Padding */
+.mt-5 {
+  margin-top: 5px !important;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mt-40 {
+  margin-top: 40px !important;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.mr-5 {
+  margin-right: 5px !important;
+}
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.mr-20 {
+  margin-right: 20px !important;
+}
+
+.mr-40 {
+  margin-right: 40px !important;
+}
+
+.mr-80 {
+  margin-right: 80px !important;
+}
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.ml-5 {
+  margin-left: 5px !important;
+}
+
+.ml-10 {
+  margin-left: 10px !important;
+}
+
+.ml-20 {
+  margin-left: 20px !important;
+}
+
+.ml-40 {
+  margin-left: 40px !important;
+}
+
+.ml-80 {
+  margin-left: 80px !important;
+}
+
+.pt-5 {
+  padding-top: 5px !important;
+}
+
+.pt-10 {
+  padding-top: 10px !important;
+}
+
+.pt-20 {
+  padding-top: 20px !important;
+}
+
+.pr-5 {
+  padding-right: 5px !important;
+}
+
+.pr-10 {
+  padding-right: 10px !important;
+}
+
+.pr-20 {
+  padding-right: 20px !important;
+}
+
+.pb-5 {
+  padding-bottom: 5px !important;
+}
+
+.pb-10 {
+  padding-bottom: 10px !important;
+}
+
+.pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.pl-5 {
+  padding-left: 5px !important;
+}
+
+.pl-10 {
+  padding-left: 10px !important;
+}
+
+.pl-20 {
+  padding-left: 20px !important;
+}
+
+
+/* Textos */
+.align-left {
+  text-align: left !important;
+}// .text-left
+
+.align-right {
+  text-align: right !important;
+}// .text-right
+
+.align-justify {
+  text-align: justify !important;
+}// .text-justify
+
+.align-center {
+  text-align: center !important;
+}// .text-center
+
+.pull-center {
+  margin: 0 auto !important;
+}// .pull-center
+
+.inline-block {
+  display: inline-block !important;
+}// .inline-block
+
+.bold {
+  font-weight: bold;
+}
+
+// Colores
+
+
+.no-padding {
+  padding: 0 !important;
+}// .col-no-gutter
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-radius {
+  @include border-radius(0px);
+}
+
+// Backgrounds
+.bg-primary {
+  background-color: $brandPrimary;
+}
+
+.bg-secondary {
+  background-color: $brandSecondary;
+}
+
+.bg-success {
+  background-color: $brandSuccess;
+}
+
+.bg-info {
+  background-color: $brandInfo;
+}
+
+.bg-warning {
+  background-color: $brandWarning;
+}
+
+.bg-danger {
+  background-color: $brandDanger;
+}
+
+.bg-inverse {
+  background-color: $brandInverse;
+}
+
+.bg-default {
+  background-color: $brandDefault;
+}
+
+// Border
+.border-color-primary {
+  border-color: $brandPrimary !important;
+}
+
+.border-color-secondary {
+  border-color: $brandSecondary !important;
+}
+
+.border-color-success {
+  border-color: $brandSuccess !important;
+}
+
+.border-color-info {
+  border-color: $brandInfo !important;
+}
+
+.border-color-warning {
+  border-color: $brandWarning !important;
+}
+
+.border-color-danger {
+  border-color: $brandDanger !important;
+}
+
+.border-color-inverse {
+  border-color: $brandInverse !important;
+}
+
+.border-bottom {
+  border-bottom: $borderWidth solid $borderColor;
+}
+
+.border-thin {
+  border-width: 1px;
+}
+
+.display-block {
+  display: block !important;
+}
+
+/////
+.no-link-hover {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.ml-20 {
+  margin-left: 20px !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pl-10 {
+  padding-left: 10px !important;
+}
+
+.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    list-style: none;
+  }// li
+}// .unstyled
+
+.pointer {
+  cursor: pointer;
+}// .clickable
+
+.no-show {
+  display: none;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}// .no-marge
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-radius {
+  @include border-radius(0px);
+}
+
+.text-white {
+  color: white !important;
+  
+  &:hover, &.focus, &:active, &.active {
+    color: $whiteSnow;
+  }
+}
+
+.text-primary {
+  color: $brandPrimary;
+  
+  &:hover {
+    color: darken($brandPrimary, 10%);
+  }
+}
+
+.text-secondary {
+  color: $brandSecondary;
+  
+  &:hover {
+    color: darken($brandSecondary, 10%);
+  }
+}
+
+.black-link {
+  color: black !important;
+  
+  &:hover {
+    color: #333 !important;
+    text-decoration: none !important;
+  }// &:hover
+}// .black-link
+
+@media screen and (max-width: 767px) {
+  .pull-left-xs {
+    float: left !important;
+  }
+  
+  .mt-xs-5 {
+    margin-top: 5px !important;
+  }
+  
+  .mt-xs-10 {
+    margin-top: 10px !important;
+  }
+  
+  .mt-xs-20 {
+    margin-top: 20px !important;
+  }
+  
+  .mr-xs-5 {
+    margin-right: 5px !important;
+  }
+  
+  .mr-xs-10 {
+    margin-right: 10px !important;
+  }
+  
+  .mr-xs-20 {
+    margin-right: 20px !important;
+  }
+  
+  .mb-xs-5 {
+    margin-bottom: 5px !important;
+  }
+  
+  .mb-xs-10 {
+    margin-bottom: 10px !important;
+  }
+  
+  .mb-xs-20 {
+    margin-bottom: 20px !important;
+  }
+  
+  .ml-xs-5 {
+    margin-left: 5px !important;
+  }
+  
+  .ml-xs-10 {
+    margin-left: 10px !important;
+  }
+  
+  .ml-xs-20 {
+    margin-left: 20px !important;
+  }
+  
+  .pt-xs-5 {
+    padding-top: 5px !important;
+  }
+  
+  .pt-xs-10 {
+    padding-top: 10px !important;
+  }
+  
+  .pt-xs-20 {
+    padding-top: 20px !important;
+  }
+  
+  .pr-xs-5 {
+    padding-right: 5px !important;
+  }
+  
+  .pr-xs-10 {
+    padding-right: 10px !important;
+  }
+  
+  .pr-xs-20 {
+    padding-right: 20px !important;
+  }
+  
+  .pb-xs-5 {
+    padding-bottom: 5px !important;
+  }
+  
+  .pb-xs-10 {
+    padding-bottom: 10px !important;
+  }
+  
+  .pb-xs-20 {
+    padding-bottom: 20px !important;
+  }
+  
+  .pl-xs-5 {
+    padding-left: 5px !important;
+  }
+  
+  .pl-xs-10 {
+    padding-left: 10px !important;
+  }
+  
+  .pl-xs-20 {
+    padding-left: 20px !important;
+  }
+}

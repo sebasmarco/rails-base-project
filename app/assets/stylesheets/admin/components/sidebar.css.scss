@@ -1,0 +1,113 @@
+.sidebar-header { 
+  a {
+    display:          inline-block;
+    padding:          15px 0 !important;
+    text-align:       center;
+    background-color: $sidebarHeaderBg;
+    color:            $sidebarLinkColor;
+    text-decoration:  none;
+    height:           $sidebarHeaderHeight;
+    width:            100%;
+    font-size:        $sidebarHeaderFontSize;
+    line-height:      $sidebarHeaderLineHeight;
+    font-weight:      $sidebarHeaderFontWeight;
+    
+    &:hover {
+      text-decoration:  none;
+      color:            $sidebarLinkHoverColor;
+      background-color: $sidebarHeaderHoverBg;
+    }// &:hover
+  }// a
+}// .sidebar-header
+
+.sidebar-subheader {
+  padding:    1em;
+  color:      $sidebarSubheaderColor;
+  text-align: center;
+  
+  .img-circle {
+    width:          100px;
+    height:         auto;
+    margin-bottom:  1em;
+    background:     white;
+  }
+  
+  a {
+    color:    $sidebarLinkColor;
+    
+    &:hover {
+      color:  $sidebarLinkHoverColor;
+    }// &:hover
+  }// a
+}// .sidebar-subheader 
+
+.sidebar-nav {
+  padding-left:   0;
+  list-style:     none;
+  margin-bottom:  30px;
+  
+  .sidebar-sub-nav {
+    padding-left: 0;
+    list-style:   none;
+  }
+}// .sidebar-nav
+
+.sidebar-nav > li a {
+  display:          block;
+  padding:          10px 15px;
+  color:            $sidebarLinkColor;
+  text-decoration:  none;
+  font-weight:      $sidebarLinkFontWeight;
+  
+  &:hover {
+    position:       relative;
+    background:     $sidebarLinkActiveBg;
+  }
+}
+
+.sidebar-nav > li.active > a {
+  position:         relative;
+  background-color: $sidebarLinkActiveBg;
+}
+
+.sidebar-nav > li.active > a:before {
+  content:          " ";
+  position:         absolute;
+  top:              0;
+  left:             0;
+  width:            4px;
+  height:           100%;
+  background-color: $brandPrimary;
+}
+
+.sidebar-nav > li a .fa:first-child {
+  margin-right:     6px;
+}
+
+.sidebar-nav > li.header {
+  padding:          20px 15px;
+  color:            $sidebarLinkHeaderColor;
+  text-transform:   uppercase;
+  font-size:        $sidebarLinkHeaderFontSize;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    left: 0;
+    padding-left: 0;
+  }
+  .wrapper.sidebar-toggle {
+    left: 190px;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    left: 0;
+    padding-left: 190px;
+  }
+  .wrapper.sidebar-toggle {
+    left: 0;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,11 @@
+<nav class="navbar navbar-inverse top-nav">
+  <div class="navbar-header">
+    <%= link_to "#", class: "btn btn-link", data: { toggle: "admin-sidebar" } do %>
+      <span class="text-white"><i class="fa fa-fw fa-align-justify"></i> Menú</span>
+    <% end %>
+    
+    <%= link_to root_url, class: "btn btn-link btn-link-hover pull-right", target: "_blank" do %>
+      <span class="text-white"><%= fa_icon "eye" %> Ver Sitio</span>
+    <% end %>
+  </div>
+</nav><!-- nav -->

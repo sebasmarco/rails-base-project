@@ -1,0 +1,100 @@
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <%= link_to "Administrador", admin_root_url %>
+  </div><!-- /.sidebar-header -->
+  
+  <div class="sidebar-subheader">
+    <p>
+      <strong><%= link_to current_user.name, admin_profiles_path %></strong>
+    </p>
+    
+  </div><!-- /.sidebar-subheader -->
+  
+  <ul class="sidebar-nav">
+    <li class="<%= controller.controller_name == 'dashboard' ? 'active' : '' %>">
+      <%= link_to admin_root_url do %>
+        <%= fa_icon "bar-chart-o" %>
+        Dashboard
+      <% end %>
+    </li>
+    
+    <li class="header">
+      <i class="fa fa-circle-o text-success"></i> Plataforma
+    </li>
+      
+    <li class="<%= controller.controller_name == 'xxxxxx' ? 'active' : '' %>">
+      <%= link_to "#" do %>
+        <%= fa_icon "warning" %>
+        Link 1
+      <% end %>
+    </li>
+    
+    <li class="<%= controller.controller_name == 'xxxxxx' ? 'active' : '' %>">
+      <%= link_to "#" do %>
+        <%= fa_icon "warning" %>
+        Link 2
+      <% end %>
+    </li>
+    
+    <li class="<%= controller.controller_name == 'xxxxxx' ? 'active' : '' %>">
+      <%= link_to "#" do %>
+        <%= fa_icon "warning" %>
+        Link 3
+      <% end %>
+    </li>
+    
+    <li class="header">
+      <i class="fa fa-circle-o text-primary"></i> Usuarios
+    </li>
+    
+    <li class="<%= controller.controller_name == 'administrators' ? 'active' : '' %>">
+      <%= link_to admin_administrators_path do %>
+        <%= fa_icon "users" %>
+        Administradores
+      <% end %>
+    </li>
+    
+    <li class="header">
+      <i class="fa fa-circle-o text-info"></i> Sitio Web
+    </li>
+    
+    <li class="<%= controller.controller_name == 'xxxxxx' ? 'active' : '' %>">
+      <%= link_to "#" do %>
+        <%= fa_icon "warning" %>
+        Link 1
+      <% end %>
+    </li>
+    
+    <li class="<%= controller.controller_name == 'xxxxxx' ? 'active' : '' %>">
+      <%= link_to "#" do %>
+        <%= fa_icon "warning" %>
+        Link 2
+      <% end %>
+    </li>
+    
+    <li class="<%= controller.controller_name == 'xxxxxx' ? 'active' : '' %>">
+      <%= link_to "#" do %>
+        <%= fa_icon "warning" %>
+        Link 3
+      <% end %>
+    </li>
+    
+    <li class="header">
+      <i class="fa fa-circle-o text-danger"></i> Otros
+    </li>
+    
+    <li class="<%= controller.controller_name == 'profiles' ? 'active' : '' %>">
+      <%= link_to admin_profiles_path do %>
+        <%= fa_icon "cog" %>
+        Perfil
+      <% end %>
+    </li>
+    
+    <li>
+      <%= link_to admin_logout_path do %>
+        <%= fa_icon "times-circle" %>
+        Salir
+      <% end %>
+    </li>
+  </ul><!-- sidebar-nav -->
+</aside><!-- sidebar -->

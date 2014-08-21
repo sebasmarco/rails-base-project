@@ -1,0 +1,90 @@
+.pagination {
+  display:        inline-block;
+  padding-left:   0;
+  margin:         20px 0;
+  border-radius:  $borderRadiusBase;
+  float: right;
+  
+  ul {
+    padding: 0;
+  
+    li {
+      display: inline-block;
+      float: left;
+      
+      a, span {
+        border:   1px solid $borderColor;
+        border-right: none;
+        color:    $grey;
+        padding:  4px 10px;
+        font-size: $paginationLinkFontSize;
+      }
+      
+      &:first-child > a, &:first-child > span {
+        border-bottom-left-radius:  $borderRadiusBase;
+        border-top-left-radius:     $borderRadiusBase;
+      }
+      
+      &:last-child > a, &:last-child > span {
+        border-right: 1px solid $borderColor;
+        border-bottom-right-radius: $borderRadiusBase;
+        border-top-right-radius:    $borderRadiusBase;
+      }
+      
+      a:hover, a:focus, span:hover, span:focus {
+        background-color: $paginationLinkHoverBg;
+        text-decoration: none;
+      }
+      
+      &.active {
+        a, a:hover, a:focus, span, span:hover, span:focus {
+          color:            $paginationActiveLinkColor;
+          background-color: $paginationActiveLinkBg;
+          border-color:     $paginationActiveLinkBorder;
+          text-decoration: none;
+        }
+      }
+      
+      &.disabled {
+        border-color: $paginationActiveLinkDisabled;
+      }
+    }// li
+  }// ul
+}// .pagination
+
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+  border-bottom-left-radius: $borderRadiusBase;
+  border-top-left-radius: $borderRadiusBase;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  background-color: $paginationActiveLinkBg;
+  border-color: $paginationActiveLinkBorder;
+}
+
+.pagination-sm > li > a, .pagination-sm > li > span {
+  font-size: $paginationLinkFontSize;
+}
+
+.pagination > li > a, .pagination > li > span {
+  border-width: $paginationBorderWidth;
+  border-color: $paginationBorder;
+  color: $paginationLinkColor;
+  font-weight: $paginationLinkFontWeight;
+  font-size: $paginationLinkFontSize;
+  
+  margin-left: -2px;
+  
+  @include transition(all 0.2s ease-in);
+  
+  &:hover {
+    color: $paginationLinkHoverColor;
+    background-color: $paginationLinkHoverBg;
+  }
+}
+
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
+  border-color: $paginationBorder;
+  color: $paginationLinkColor;
+  cursor: default;
+}

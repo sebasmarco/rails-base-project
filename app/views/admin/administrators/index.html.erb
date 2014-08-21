@@ -1,0 +1,93 @@
+<section class="wrapper-xs bg-white border-default">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-7">
+        <ol class="breadcrumb no-margin">
+          <% if params[:query].blank? %>
+            <li class="active"><strong>Administradores</strong></li>
+          <% else %>      
+            <li><%= link_to "Administradores", admin_administrators_path %></li>    
+            <li class="active"><strong><%= params[:query] %></strong></li>
+          <% end %>
+        </ol>
+      </div><!-- /.col -->
+      
+      <div class="col-xs-12 col-sm-5">
+        <div class="pull-right pull-left-xs">        
+          <%= link_to new_admin_administrator_path, class: "btn btn-secondary" do %>
+            <%= fa_icon "plus-circle" %> Crear Administrador
+          <% end %>
+        </div><!-- /.pull-right -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
+
+<% if flash[:success] %>
+  <%= render partial: "admin/base/message_success", 
+        locals: { message: "El administrador ha sido eliminado con éxito." } %>
+<% end %>
+
+<div class="wrapper-sm">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+         <%= form_tag admin_administrators_path, method: :get, turboboost: true, class: "form-search" do %>
+          <%= text_field_tag "query", params[:query], id: "navbar-search", class: "form-control", 
+                placeholder: "Buscar por nombre o correo electrónico..." %>   
+          
+          <% unless params[:query].blank? %>
+            <%= link_to admin_administrators_path, class: "cancel-search" do %>
+              <%= fa_icon "times-circle" %>
+            <% end %>
+          <% end %>         
+         <% end %>
+      </div><!-- col -->
+    </div><!-- row -->
+    
+    <div class="row mt-20">
+      <div class="col-xs-12">        
+        <div class="table-responsive">
+          <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th style="width:50px"></th>
+                <th><span class="line"></span>Nombre</th>
+                <th><span class="line"></span>Correo Electrónico</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @administrators.each do |administrator| %>
+                <tr>
+                  <td>
+                    <%= link_to edit_admin_administrator_path(administrator), class: "thumbnail", style: "width: 50px" do %>
+                      <%= image_tag administrator.avatar_small %>
+                    <% end %>
+                  </td>
+                  <td><%= link_to administrator.name, edit_admin_administrator_path(administrator) %></td>
+                  <td><%= administrator.email %></td>
+                  <td class="align-right">
+                    <% if Admin.count > 1 and administrator.id != current_user.id %>
+                      <%= button_to admin_administrator_path(administrator), method: 'delete', class: 'btn btn-xs btn-danger', data: { confirm: "¿Estás seguro que deseas eliminar al administrador?" } do %>
+                        <%= fa_icon "trash-o" %> Eliminar
+                      <% end %>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        
+        <%= paginate @administrators %>
+      
+      </div>
+    </div><!-- row -->
+  </div><!-- container-fluid -->
+</div><!--- wrapper-sm -->
+
+<%= content_for(:javascript) do %>
+  <%= javascript_tag do %>
+  <% end %>
+<% end %>

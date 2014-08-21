@@ -1,0 +1,59 @@
+.gallery-item {
+  height: 180px;
+  margin-bottom: 10px;
+  border: 1px solid $greyDarker;
+  padding: 10px;
+  text-align: center;
+  
+  @include transition(all 0.2s ease-in-out);
+}
+
+.gallery-image-container {  
+  li {
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
+
+.gallery-image {
+  height: 170px;
+  width: 170px;
+  vertical-align: top;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  
+  border: 1px dashed $greyLight;
+  padding: 5px;
+  
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  img {
+    max-width: 148px;
+    max-height: 150px;
+    margin-left: -3px;
+  }
+  
+  &:hover {
+    .gallery-image-delete {
+      opacity: 1;
+    }
+  }
+}
+
+.gallery-image-delete, .gallery-image-cancel {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  
+  @include transition(opacity 0.2s ease-in-out);
+}
+
+.gallery-image-cancel {
+  opacity: 1;
+}

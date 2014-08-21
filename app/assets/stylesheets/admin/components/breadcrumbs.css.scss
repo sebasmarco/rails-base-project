@@ -1,0 +1,20 @@
+.breadcrumb {
+  border-radius: 2px;
+  background-clip: padding-box;
+  background-color: transparent;
+  padding: 8px 0;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > .active {
+  color: $greyDarker;
+}
+
+.breadcrumb > li + li:before {
+  font-family: "FontAwesome";
+  content: "\f105";
+  color: $greyLight;
+}

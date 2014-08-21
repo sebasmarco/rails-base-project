@@ -1,0 +1,80 @@
+<%= form_for @administrator, url: admin_administrators_path do |f| %>
+  <section class="wrapper-xs bg-white border-default">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <ol class="breadcrumb no-margin">
+            <li><%= link_to "Administradores", admin_administrators_path %></li>
+            <li class="active"><strong>Crear Administrador</strong></li>
+          </ol>
+        </div><!-- /.col -->
+        
+        <div class="col-xs-12 col-sm-5">
+          <div class="pull-right pull-left-xs">
+            <%= link_to "Cancelar", admin_administrators_path, class: "btn btn-inverse" %>
+            <div class="btn-group">
+              <button type="submit" class="btn btn-primary" name="save">Guardar</button>
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Mostrar Opciones</span>
+              </button>
+              
+              <ul class="dropdown-menu dropdown-menu-md dropdown-menu-right" role="menu">
+                <li>
+                  <button type="submit" class="no-btn" name="add_more">
+                    <%= fa_icon "plus-circle" %> Guardar & Agregar Otro
+                  </button>
+                </li>
+              </ul>
+            </div><!-- btn-group -->
+          </div><!-- /.pull-right -->
+        </div><!-- /.col -->
+        
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- wrapper-xs -->
+  
+  <% if @administrator.errors.any? %>
+    <%= render partial: "admin/base/message_error", 
+          locals: { message: "No se puede guardar al administrador debido a los siguientes errores:", 
+          errors: @administrator.errors } %>
+  <% end %>
+  
+  <% if flash[:success] %>
+    <%= render partial: "admin/base/message_success", 
+          locals: { message: "El administrador ha sido guardado con éxito." } %>
+  <% end %>
+    
+  <section class="wrapper-sm">
+    <div class="container-fluid">
+      <%= render partial: "form", locals: { f: f } %>
+    </div><!-- container-fluid -->
+  </section><!-- wrapper-sm -->
+  
+  <section class="wrapper-xs bg-white border-default border-default-top">
+    <div class="container-fluid">
+      <div class="row">        
+        <div class="col-xs-12">
+          <div class="pull-right">
+            <%= link_to "Cancelar", admin_administrators_path, class: "btn btn-inverse" %>
+            <div class="btn-group dropup">
+              <button type="submit" class="btn btn-primary" name="save">Guardar</button>
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Mostrar Opciones</span>
+              </button>
+              
+              <ul class="dropdown-menu dropdown-menu-md dropdown-menu-right" role="menu">
+                <li>
+                  <button type="submit" class="no-btn" name="add_more">
+                    <%= fa_icon "plus-circle" %> Guardar & Agregar otro
+                  </button>
+                </li>
+              </ul>
+            </div><!-- btn-group -->
+          </div><!-- /.pull-right -->
+        </div><!-- /.col -->   
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section><!-- wrapper-xs -->
+<% end %>

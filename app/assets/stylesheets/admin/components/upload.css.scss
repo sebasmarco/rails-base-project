@@ -1,0 +1,43 @@
+.upload-file-input {
+  display: none !important;
+}
+
+.upload-image {
+  cursor: pointer;
+  border: 2px dashed $greyLight;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  
+  @include transition(all 0.2s ease-in-out);
+  
+  &:hover {
+    background-color: #fafafa;
+    border-color: black;
+      
+    .upload-image-icon {
+      color: black;
+    }
+  }
+}
+
+.upload-image-icon {
+  font-size: 20px;
+  color: $greyLight;
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  
+  @include transition(all 0.2s ease-in-out);
+}
+
+.upload-image-text {
+  font-weight: bold;
+}
+
+.upload-image-help {
+  margin-bottom: 20px;
+  text-align: center;
+  color: $grey;
+}

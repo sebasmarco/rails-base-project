@@ -1,0 +1,31 @@
+.segmented {
+  padding: 0;
+  line-height: 22px;
+  font-size: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+}// .segmented
+
+.segmented > li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}// li
+
+.segmented > li > a {
+  display: inline-block;
+  position: static;
+  border-radius: 0;
+  border-left-width: 0 !important;
+}
+
+.segmented > li:first-child > .btn {
+  border-left-width: 1px !important;
+}
+
+.segmented>li:only-child>.btn, .segmented>li.only-child>.btn {
+  border-left-width: 1px!important;
+}
