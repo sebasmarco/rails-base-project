@@ -63,9 +63,9 @@ Debes instalar y/o actualizar todas las gemas del proyecto con el comando
 
 Utilizamos **[Postgres DB](http://www.postgresql.org/)** para nuestra base de datos. Para crear todas las tablas y poblar la base de datos con los usuarios administradores necesitas correr estos comandos:
 
-    bundle exec run rake db:create
-    bundle exec run rake db:migrate
-    bundle exec run rake db:seed
+    foreman run rake db:create
+    foreman run rake db:migrate
+    foreman run rake db:seed
 
 **Iniciar el Servidor**
 
