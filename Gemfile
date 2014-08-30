@@ -29,22 +29,23 @@ gem 'sass-rails', '~> 4.0.3'                    # SCSS para stylesheets
 gem 'heroku-deflater', :group => :production
 
 ## Javascript
-gem 'coffee-rails', '~> 4.0.0'  # CoffeeScript para .js.coffee
-gem 'eco'                       # Templates JS con Eco. 
-gem 'gon'                       # Enviar datos desde un controlador a javascript. https://github.com/gazay/gon
-gem 'jquery-rails'              # JQuery como libreria de JavaScript
-gem 'jquery-fileupload-rails'   # JQuery file upload.
-gem 'turbolinks'                # Hace vinculos en el sitio mas rapido. https://github.com/rails/turbolinks
-gem 'turbolinks_transitions'    # Agregar transiciones a turbolinks. https://github.com/caarlos0/turbolinks_transitions
-gem 'turboboost'                # Turbolinks para formularios. https://github.com/waymondo/turboboost
-gem 'uglifier', '>= 1.3.0'      # Comprimer js
+gem 'coffee-rails', '~> 4.0.0'    # CoffeeScript para .js.coffee
+gem 'eco'                         # Templates JS con Eco. 
+gem 'gon'                         # Enviar datos desde un controlador a javascript. https://github.com/gazay/gon
+gem 'google-analytics-turbolinks' # Google Analytics with Turbolinks
+gem 'jquery-rails'                # JQuery como libreria de JavaScript
+gem 'jquery-fileupload-rails'     # JQuery file upload.
+gem 'turbolinks'                  # Hace vinculos en el sitio mas rapido. https://github.com/rails/turbolinks
+gem 'turbolinks_transitions'      # Agregar transiciones a turbolinks. https://github.com/caarlos0/turbolinks_transitions
+gem 'turboboost'                  # Turbolinks para formularios. https://github.com/waymondo/turboboost
+gem 'uglifier', '>= 1.3.0'        # Comprimer js
 
 ## JSON
-gem 'oj', :require => false     # JSON optimizado. https://github.com/ohler55/oj
-gem 'rabl'                      # Templates para JSON, XML, etc. https://github.com/nesquena/rabl
+gem 'oj', :require => false       # JSON optimizado. https://github.com/ohler55/oj
+gem 'rabl'                        # Templates para JSON, XML, etc. https://github.com/nesquena/rabl
 
 ## Patrones de Diseno
-gem 'draper'                    # Decoradores para Modelos. https://github.com/drapergem/draper
+gem 'draper'                      # Decoradores para Modelos. https://github.com/drapergem/draper
 
 ## Servidores
 gem 'rails_12factor', :group => :production  # Logs Visible en Heroku. https://devcenter.heroku.com/articles/rails-integration-gems

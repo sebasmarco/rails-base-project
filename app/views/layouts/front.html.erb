@@ -26,6 +26,8 @@
     <%= javascript_tag do %>      
       NProgressSetup.init()
     <% end %>
+    
+    <%= render partial: "front/base/analytics" if Rails.env.production? %>
   </head>
   <body>    
     <div id="content">

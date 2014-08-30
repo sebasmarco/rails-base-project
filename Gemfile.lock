@@ -134,6 +134,7 @@ GEM
       json
       multi_json
       request_store (>= 1.0.5)
+    google-analytics-turbolinks (0.0.4)
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -316,6 +317,7 @@ DEPENDENCIES
   font-awesome-rails
   friendly_id
   gon
+  google-analytics-turbolinks
   heroku-deflater
   hirb
   it
