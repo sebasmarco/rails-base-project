@@ -39,11 +39,6 @@ Se debe utilizar la cuenta de testeo que tenemos para esto proyecto en Sendgrid.
 
 Hay que modificar los datos puestos con la info de base de datos de este proyecto. Esta puesto una base de datos "gitz" por mientras, pero se debe cambiar eso a el nombre del proyecto para no hacer colisiones de BDs entre proyectos. 
 **ejemplo: gitz_development => reforce_development.**
-
-        DB_HOST_DEV: host de la base de datos desarrollo. En la mayoría de los casos no es necesario modificar.
-        DB_NAME_DEV: nombre de la base de datos de desarrollo. Debería seguir la estructura: proyecto_development
-        DB_HOST_TEST: host de la base de datos testeo. En la mayoría de los casos no es necesario modificar.
-        DB_NAME_TEST: nombre de la base de datos de testeo. Debería seguir la estructura: proyecto_test
         
 **Nombre de la Aplicación**
 
