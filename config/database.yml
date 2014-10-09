@@ -1,14 +1,14 @@
 development:
-  adapter: postgresql
-  host: <%= ENV['DB_HOST_DEV'] %>
+  adapter:  postgresql
+  host:     localhost
   encoding: unicode
-  database: <%= ENV['DB_NAME_DEV'] %>
+  database: gitz2_development
 
 test:
-  adapter: postgresql
-  host: <%= ENV['DB_HOST_TEST'] %>
+  adapter:  postgresql
+  host:     localhost
   encoding: unicode
-  database: <%= ENV['DB_NAME_TEST'] %>
+  database: gitz2_test
 
 production:
   adapter:  postgresql

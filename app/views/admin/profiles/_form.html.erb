@@ -1,19 +1,19 @@
 <div class="row">
-  <div class="section first-section description">
+  <div class="section">
     <div class="section-summary col-xs-12 col-md-3">
-      <h1>Personal Information</h1>
-      <p>Changer your name and email address.</p>
+      <h1>Información Personal</h1>
+      <p>Modifica tu nombre y correo electrónico.</p>
     </div><!-- col-sm-3 -->
     
     <div class="section-content col-xs-12 col-md-9">
       <div class="row">
         <div class="form-group col-xs-12 col-md-12">
-          <%= f.label :name, 'Name*' %>
+          <%= f.label :name, 'Nombre*' %>
           <%= f.text_field :name, class: "form-control" %>
         </div><!-- form-group -->
         
         <div class="form-group col-xs-12 col-md-12">
-          <%= f.label :email, 'Email*' %>
+          <%= f.label :email, 'Correo Electrónico*' %>
           <%= f.email_field :email, class: "form-control" %>
         </div><!-- form-group -->
       </div><!-- row -->
@@ -24,24 +24,31 @@
   
   <div class="section">
     <div class="section-summary col-xs-12 col-md-3">
-      <h1>Profile Image</h1>
-      <p>Select an image for your profile.</p>
+      <h1>Imagen de Perfil</h1>
+      <p>Selecciona una imagen para tu perfil.</p>
     </div><!-- col-sm-3 -->
     
     <div class="section-content col-xs-12 col-md-9">
-      <div class="row">   
-        <% if @administrator && @administrator.avatar.exists? %>
-          <div class="form-group col-xs-12">
-            <%= f.label :thumbnail, "Current" %>
-            <%= link_to "#", class: "thumbnail", style: "width:100px;height:auto;" do %>
-              <%= image_tag @administrator.avatar.url(:small) %>
-            <% end %>
+      <div class="row">  
+        <div class="col-xs-12 col-sm-4">
+          <% if @administrator && @administrator.avatar.exists? %>
+            <div class="form-group">
+              <%= link_to "#", class: "thumbnail", style: "width:100%;height:auto;" do %>
+                <%= image_tag @administrator.avatar.url(:medium), id: "avatar-container", style: "width:100%" %>
+              <% end %>
+            </div><!-- form-group -->
+          <% else %>
+            <div class="form-group">
+              <%= link_to "#", class: "thumbnail", style: "width:100%;height:auto;" do %>
+                <%= image_tag "admin/defaults/user_medium.png", id: "avatar-container", style: "width:100%" %>
+              <% end %>
+            </div>
+          <% end %>
+          
+          <div class="form-group">
+            <%= f.file_field :avatar, class: "form-control form-control-upload-styled", data: { toggle: "avatar-preview", container: "#avatar-container" } %>
           </div>
-        <% end %>
-        <div class="form-group col-xs-12 col-sm-12">
-          <%= f.label :avatar, 'Profile Image' %>
-          <%= f.file_field :avatar, class: "form-control" %>
-        </div><!-- form-group -->
+        </div><!-- col -->
       </div><!-- row -->
     </div><!-- section-content -->
   </div><!-- section -->   
@@ -50,22 +57,28 @@
   
   <div class="section">
     <div class="section-summary col-xs-12 col-md-3">
-      <h1>Account Details</h1>
-      <p>Change your password.</p>
+      <h1>Detalles de tu Cuenta</h1>
+      <p>Modifica tu contraseña.</p>
     </div><!-- col-sm-3 -->
     
     <div class="section-content col-xs-12 col-md-9">
       <div class="row">      
         <div class="form-group col-xs-12 col-md-12">
-          <%= f.label :password, 'Password' %>
+          <%= f.label :password, 'Contraseña' %>
           <%= f.password_field :password, class: "form-control" %>
         </div><!-- form-group -->
         
         <div class="form-group col-xs-12 col-md-12">
-          <%= f.label :password_confirmation, 'Repeat Password' %>
+          <%= f.label :password_confirmation, 'Confirmar Contraseña' %>
           <%= f.password_field :password_confirmation, class: "form-control" %>
         </div><!-- form-group -->
       </div><!-- row -->
     </div><!-- section-content -->
   </div><!-- section -->
 </div><!-- row -->
+
+<%= content_for(:javascript) do %>
+  <%= javascript_tag do %>
+    AvatarPreviewApp.init();
+  <% end %>
+<% end %>

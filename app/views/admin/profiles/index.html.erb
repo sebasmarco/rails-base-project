@@ -4,13 +4,13 @@
       <div class="row">
         <div class="col-xs-12 col-sm-7">
           <ol class="breadcrumb no-margin">
-            <li><strong>Profile</strong></li>
+            <li><strong>Perfil</strong></li>
           </ol>
         </div><!-- /.col -->
         
         <div class="col-xs-12 col-sm-5">
           <div class="pull-right pull-left-xs">
-            <%= submit_tag "Save", class: "btn btn-primary" %>
+            <%= submit_tag "Guardar", class: "btn btn-primary" %>
           </div><!-- /.pull-right -->
         </div><!-- /.col -->
         
@@ -20,13 +20,13 @@
   
   <% if @administrator.errors.any? %>
     <%= render partial: "admin/base/message_error", 
-          locals: { message: "Your profile cannot be updated because of these errors:", 
+          locals: { message: "Tu perfil no puede ser guardado debido a los siguientes errores:", 
           errors: @administrator.errors } %>
   <% end %>
   
   <% if flash[:success] %>
     <%= render partial: "admin/base/message_success", 
-          locals: { message: "Your profile has been updated successfully." } %>
+          locals: { message: "Tu perfil ha sido actualizado con éxito." } %>
   <% end %>
     
   <section class="wrapper-sm">
@@ -40,7 +40,7 @@
       <div class="row">        
         <div class="col-xs-12">
           <div class="pull-right">
-            <%= submit_tag "Save", class: "btn btn-primary" %>
+            <%= submit_tag "Guardar", class: "btn btn-primary" %>
           </div><!-- /.pull-right -->
         </div><!-- /.col -->   
       </div><!-- /.row -->

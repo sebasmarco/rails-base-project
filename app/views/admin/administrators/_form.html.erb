@@ -36,20 +36,26 @@
     
     <div class="section-content col-xs-12 col-md-9">
       <div class="row">
-        <% if @administrator and @administrator.avatar.exists? %>
-          <div class="form-group col-xs-12">
-            <%= f.label :actual, "Actual" %>
-            <%= link_to "#", class: "thumbnail", style: "width:100px;height:auto;" do %>
-              <%= image_tag @administrator.avatar.url(:small) %>         
-            <% end %>
+        <div class="col-xs-12 col-sm-4">
+          <% if @administrator && @administrator.avatar.exists? %>
+            <div class="form-group">
+              <%= link_to "#", class: "thumbnail", style: "width:100%;height:auto;" do %>
+                <%= image_tag @administrator.avatar.url(:medium), id: "avatar-container", style: "width:100%" %>
+              <% end %>
+            </div><!-- form-group -->
+          <% else %>
+            <div class="form-group">
+              <%= link_to "#", class: "thumbnail", style: "width:100%;height:auto;" do %>
+                <%= image_tag "admin/defaults/user_medium.png", id: "avatar-container", style: "width:100%" %>
+              <% end %>
+            </div>
+          <% end %>
+          
+          <div class="form-group">
+            <%= f.file_field :avatar, class: "form-control form-control-upload-styled", data: { toggle: "avatar-preview", container: "#avatar-container" } %>
           </div>
-        <% end %>  
-
-        <div class="form-group col-xs-12 col-sm-12">
-          <%= f.label :avatar, "Imagen" %>
-          <%= f.file_field :avatar, class: "form-control" %>
-        </div><!-- form-group -->
-      </div>
+        </div><!-- col -->
+      </div><!-- row -->
     </div><!-- section-content -->
   </div><!-- section -->  
   
@@ -60,7 +66,7 @@
   <div class="section">
     <div class="section-summary col-xs-12 col-md-3">
       <h1>Detalles de la Cuenta</h1>
-      <p>Ingresa o modifica la contraseña del administrador. <b>Nota:</b> Si se está creando un administrador nuevo el ingreso de la contraseña es obligatorio.</p>
+      <p>Ingresa o modifica la contraseña del administrador. <br /><b>Nota:</b> Si se está creando un administrador nuevo el ingreso de la contraseña es obligatorio.</p>
     </div><!-- col-lg-3 -->
     
     <div class="section-content col-xs-12 col-md-9">
@@ -80,3 +86,9 @@
   
   <div class="section-separator"></div>
 </div>
+
+<%= content_for(:javascript) do %>
+  <%= javascript_tag do %>
+    AvatarPreviewApp.init();
+  <% end %>
+<% end %>

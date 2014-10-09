@@ -9,12 +9,13 @@ Bundler.require(*Rails.groups)
 module Cineola
   class Application < Rails::Application
     config.encoding 	= "utf-8"
-    config.time_zone 	= ENV['TIMEZONE']
+    config.time_zone 	= "Santiago"
     
     config.filter_parameters += [:password, :password_confirmation]
     config.assets.enabled = true
     config.assets.digest  = true
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join('app', 'assets', 'videos')
     config.assets.version = '1.0'
     
     config.i18n.default_locale  = :en

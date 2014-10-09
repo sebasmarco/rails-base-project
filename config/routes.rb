@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   
   ## Rutas para el Front End
   scope module: "front" do
-    resources :landings, only: [:index], path: "inicio"
+    resources :home, only: [:index], path: "inicio"
   end
   
-  root to: 'front/landings#index'
+  root to: 'front/home#index'
 end

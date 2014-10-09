@@ -54,7 +54,7 @@ class User < ActiveRecord::Base
   
   # == Imagen de Perfil
   has_attached_file :avatar, styles: { 
-		tiny: "32x32#",
+		thumb:  "50x50#",
 		small:  "100x100#",
 		medium: "400x400#"
 	}, 
