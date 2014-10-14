@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.1.2"
 
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.6'
 
 ## Amazon S3 y Imagenes
 gem 'aws-s3', :require => 'aws/s3'              # Conexion con amazon. https://github.com/marcel/aws-s3
