@@ -75,6 +75,7 @@ group :development, :test do
   gem 'binding_of_caller',  :require => false
   gem 'bullet'
   gem 'factory_girl_rails'
+  gem 'hirb-unicode'
   gem 'meta_request'
   gem 'quiet_assets'
   gem 'rspec-rails'
